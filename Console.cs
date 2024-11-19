@@ -1,11 +1,12 @@
 using System;
+using System.Collections.Generic;
 
 public class HelloWorld
 {
     public static void Main(string[] args)
     {
-        // Console.WriteLine(StringReading.CountVoice(""));
-        Console.WriteLine(StringReading.ReadUndoubletapably("null"));
+        Console.WriteLine(StringReading.CountVoice("A SDwASasd!2qasd f1"));
+        Console.WriteLine(StringReading.ReadUndoubletapably("Tthisss'___  Innnde;;"));
     }
     
     class StringReading
@@ -30,9 +31,9 @@ public class HelloWorld
         
         public static string ReadUndoubletapably (string text)
         {
-            if (text == null) return "";
+            if (text == null) return "0";
             
-            string edited_text = "";
+            List<char> chars_list = new List<char>();
             char previous_char = 'π';
             
             foreach (char letter in text)
@@ -40,19 +41,21 @@ public class HelloWorld
                 if (previous_char == 'π') 
                 {
                     previous_char = letter;
-                    edited_text[edited_text.lenght - 1];
+                    chars_list.Add(letter);
                     continue;
                 }
                 
                 if (letter == previous_char) continue;
                 
                 previous_char = letter;
-                edited_text[edited_text.lenght - 1];
+                chars_list.Add(letter);
                 continue;
                 
             }
             
-            return text;
+            string edited_text = String.Concat(chars_list);
+            
+            return edited_text;
         }
     }
 }

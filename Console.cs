@@ -8,7 +8,16 @@ public class HelloWorld
         Console.WriteLine(StringReading.CountVoice("A SDwASasd!2qasd f1"));
         Console.WriteLine(StringReading.ReadUndoubletapably("Tthisss'___  Innnde;;"));
     }
-    
+
+
+    /***********************************************
+        klasa:  <StringReading>
+        opis:   <Reprezentuje manipulację stringami w sposób wyczytujący wyniki
+                Ma dwie metody statyczne: jedna liczy samogłoski stringa, a druga wyczytyje modyfikowany string bez powtórzeń poprzednich znaków>
+        metody: <CountVoice - int>
+                <ReadUndoubletapably - string>
+        author: 20051003
+    ***********************************************/
     class StringReading
     {
         public static int CountVoice (string text)
